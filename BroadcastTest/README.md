@@ -1,1 +1,5 @@
-## Broadcast Receiver 动态监听网络变化
+## Broadcast Receiver 注册
+
+1. 动态监听
+
+2. 静态监听
