@@ -15,5 +15,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SecondActivity">
+            <action android:name="com.example.activitytest.ACTION_START" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </activity>
     </application>
 </manifest>
