@@ -1,6 +1,6 @@
 # 初探 Activity
 
-* 创建 `Activity`:
+* 创建 `Activity`：
 
 1. 配置 `AndroidManifest.xml`，默认 `Android Studio` 已创建：
 
@@ -84,5 +84,14 @@
     </menu>
 ```
 
+* 销毁 `Activity`：
 
+``` java
+    button.setOnClickListener(new OnClickListener() {
+        @Overide
+        public void onClick(View v) {
+            finish();
+        }
+    });
+```
 
