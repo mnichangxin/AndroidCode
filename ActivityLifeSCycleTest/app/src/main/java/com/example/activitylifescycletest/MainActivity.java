@@ -8,13 +8,17 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_layout);
 
         Log.d("MainActivity", "onCreate");
+
+        if (savedInstanceState != null) {
+            String tempData = savedInstanceState.getString("data_key");
+            Log.d("MainActivity", tempData);
+        }
 
         Button button1 = (Button) findViewById(R.id.start_normal_activity);
         Button button2 = (Button) findViewById(R.id.start_dialog_activity);
@@ -63,5 +67,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onRestart() {
         super.onRestart();
         Log.d("MainActivity", "onRestart");
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        String tempData = "Something you just typed";
+        outState.putString("data_key", tempData);
     }
 }

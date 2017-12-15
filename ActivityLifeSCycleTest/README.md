@@ -34,3 +34,22 @@
 
 ## 活动被回收了怎么办
 
+1. 利用 `Bundle` 保存数据
+
+``` java
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        String tempData = "Something you just typed";
+        outState.putString("data_key", tempData);
+    }
+```
+
+2. 利用 `Bundle` 恢复数据
+
+``` java
+    if (savedInstanceState != null) {
+        String tempData = savedInstanceState.getString("data_key");
+        Log.d("MainActivity", tempData);
+    }
+```
