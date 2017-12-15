@@ -21,7 +21,12 @@ public class FirstActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(FirstActivity.this, "You clicked this button", Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
+                // 显式 Intent
+//                Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
+
+                // 隐式 Intent
+                Intent intent = new Intent("com.example.activitytest.ACTION_START");
+
                 startActivity(intent);
             }
         });

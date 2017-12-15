@@ -16,8 +16,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".SecondActivity">
-            <action android:name="com.example.activitytest.ACTION_START" />
-            <category android:name="android.intent.category.DEFAULT" />
+            <intent-filter>
+                <action android:name="com.example.activitytest.ACTION_START" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
     </application>
 </manifest>

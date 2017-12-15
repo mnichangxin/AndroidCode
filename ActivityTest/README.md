@@ -95,7 +95,7 @@
     });
 ```
 
-* `Activity` 的传递—— `Intent`
+* `Activity` 的传递 —— `Intent`
 
 1. 显示 `Intent`：
 
@@ -108,6 +108,23 @@
 
 2. 隐式 `Intent`：
 
-``` java
+配置 `AndroidManifest`：
 
+``` xml
+    <activity android:name=".SecondActivity">
+        <intent-filter>
+            <action android:name="com.example.activitytest.ACTION_START" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </activity>
 ```
+
+`<action>` 指明了可以相应的 `action`，`<category>` 明确指明了 `Intent` 可能带有的 `category`
+
+Intent 创建代码：
+
+``` java
+    Intent intent = new Intent("com.example.activitytest.ACTION_START");
+    startActivity(intent);
+```
+
