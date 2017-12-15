@@ -95,3 +95,19 @@
     });
 ```
 
+* `Activity` 的传递—— `Intent`
+
+1. 显示 `Intent`：
+
+``` java
+    Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
+    startActivity(intent);
+```
+
+`new Intent` 一个示例，传入当前活动上下文和启动的活动目标
+
+2. 隐式 `Intent`：
+
+``` java
+
+```
