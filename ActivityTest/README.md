@@ -1,6 +1,6 @@
 # 初探 Activity
 
-* 创建 `Activity`：
+## 创建 `Activity`：
 
 1. 配置 `AndroidManifest.xml`，默认 `Android Studio` 已创建：
 
@@ -54,7 +54,7 @@
 ```
 
 
-* `Layout` 部分：
+## `Layout` 部分：
 
 1. Button:
 
@@ -84,7 +84,7 @@
     </menu>
 ```
 
-* 销毁 `Activity`：
+## 销毁 `Activity`：
 
 ``` java
     button.setOnClickListener(new OnClickListener() {
@@ -95,7 +95,7 @@
     });
 ```
 
-* `Activity` 的传递 —— `Intent`
+## `Activity` 的传递 —— `Intent`
 
 1. 显示 `Intent`：
 
@@ -146,7 +146,7 @@ Intent 创建代码：
     startActivity(intent);
 ```
 
-* `Intent`  的数据传递：
+## `Intent`  的数据传递：
 
 都采用显式方式传递
 
