@@ -128,3 +128,84 @@ Intent 创建代码：
     startActivity(intent);
 ```
 
+3. 隐式 `Intent` 的用法：
+
+启动一个网页：
+
+``` java
+    Intent intent = new Intent(Intent.ACTION_VIEW);
+    intent.setData(Uri.parse("http://www.baidu.com"));
+    startActivity(intent);
+```
+
+启动拨号：
+
+``` java
+    Intent intene = new Intent(Intent.DIAL);
+    intent.setData(Uri.parse("tel:10086"));
+    startActivity(intent);
+```
+
+* `Intent`  的数据传递：
+
+都采用显式方式传递
+
+1. 向下一个活动传递数据：
+
+当前 Activity 向 SecondActivity 传递数据
+
+``` java
+    String data = "Hello SecondActivity";
+    Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
+    intent.putExtra("extra_data", data);
+    startActivity(intent);
+```
+
+从 FirstActivity 获得的数据
+
+``` java
+    Intent intent = getIntent();
+    final String data = intent.getStringExtra("extra_data");
+    Log.d("SecondActivity", data);
+```
+
+2. 返回数据给上一个活动：
+
+处理 SecondActivity 返回的回调
+
+``` java
+    Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
+    startActivityForResult(intent, 1);
+```
+
+``` java
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode) {
+            case 1:
+                if (resultCode == RESULT_OK) {
+                    String returnedData = data.getStringExtra("data_return");
+                    Log.d("FirstActivity", returnedData);
+                }
+        }
+    }
+```
+
+返回给 FirstActivity 的数据
+
+``` java
+    Intent intent = new Intent();
+    intent.putExtra("data_return", "Hello FirstActivity");
+    setResult(RESULT_OK, intent);
+    finish();
+```
+
+
+
+
+
+
+
+
+
