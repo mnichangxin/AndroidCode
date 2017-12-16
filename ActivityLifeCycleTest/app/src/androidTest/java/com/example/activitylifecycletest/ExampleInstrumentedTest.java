@@ -1,4 +1,4 @@
-package com.example.activitylifescycletest;
+package com.example.activitylifecycletest;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

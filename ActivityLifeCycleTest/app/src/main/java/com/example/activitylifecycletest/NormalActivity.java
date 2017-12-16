@@ -1,4 +1,4 @@
-package com.example.activitylifescycletest;
+package com.example.activitylifecycletest;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
