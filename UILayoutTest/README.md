@@ -22,7 +22,11 @@
 
 指定内容相对于组件的位置
 
-## 线性布局
+## 帧布局（FrameLayout）
+
+最简单的布局方式，只能应用基础属性
+
+## 线性布局（LinearLayout）
 
 * `android:orientation`：horizontal | vertical
 
@@ -32,7 +36,13 @@
 
 指定线性布局同一方向上所占的比例
 
-## 相对布局
+## 绝对布局（AbsoluteLayout）
+
+* `android:layout_x & android:layout_y`：值
+
+指定相对于父组件的绝对位置
+
+## 相对布局（RelativeLayout）
 
 * `android:layout_alignParent(Left|Right|Top|Bottom) & android:layout_(centerHorizontal|layout_centerVertical|layout_centerInParent )`：true | false
 
@@ -46,5 +56,14 @@
 
 指定当前组件与给定组件的（上下左右）边重合
 
-## 帧布局
+## 百分比布局（PercentFrameLayout | PercentRelativeLayout）
+
+新增布局方式，目前需要引包
+
+* `app:layout_widthPercent | app:layout_heightPercent`：百分比
+
+指定相对于父元素的百分比
+
+
+
 
