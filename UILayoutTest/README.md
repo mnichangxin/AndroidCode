@@ -18,3 +18,12 @@
 
 ## 相对布局
 
+* `android:layout_alignParent(Left|Right|Top|Bottom) & android:layout_(centerHorizontal|layout_centerVertical|layout_centerInParent )`：true | false
+
+指定组件在父元素中的位置
+
+* `android:layout_(above|below|toLeftOf|toRightOf)`：相对于的组件
+
+指定相对于组件的位置
+
+* `layout`
