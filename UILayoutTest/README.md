@@ -6,6 +6,22 @@
 
 指定宽或高跟随父元素或者适应内容
 
+* `android:layout_margin(Top|Bottom|Left|Right)`：值
+
+指定相对于父组件的边距
+
+* `android:layout_padding(Top|Bottom|Left|Right)`：值
+
+指定内容相对于组件的边距
+
+* layout_gravity: Left | Right | Top | Bottom | Center
+
+指定组件相对于父组件的位置
+
+* gravity: Left | Right | Top | Bottom | Center
+
+指定内容相对于组件的位置
+
 ## 线性布局
 
 * `android:orientation`：horizontal | vertical
@@ -20,10 +36,15 @@
 
 * `android:layout_alignParent(Left|Right|Top|Bottom) & android:layout_(centerHorizontal|layout_centerVertical|layout_centerInParent )`：true | false
 
-指定组件在父元素中的位置
+指定组件在父元素中的位置（上下左右）
 
-* `android:layout_(above|below|toLeftOf|toRightOf)`：相对于的组件
+* `android:layout_(above|below|toLeftOf|toRightOf)`：相对于的组件的ID
 
-指定相对于组件的位置
+指定当前组件位于给定组件的位置（上下左右）
 
-* `layout`
+* `android:layout_align(Top|Bottom|Left|Right|Baseline)`：相对于组件的ID
+
+指定当前组件与给定组件的（上下左右）边重合
+
+## 帧布局
+
