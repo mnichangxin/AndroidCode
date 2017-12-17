@@ -60,10 +60,13 @@
 
 新增布局方式，目前需要引包
 
-* `app:layout_widthPercent | app:layout_heightPercent`：百分比
+* `app:layout_widthPercent|app:layout_heightPercent`：百分比
 
 指定相对于父元素的百分比
 
+## 引入布局
+
+`<include>` 设置 `layout` 属性
 
 
 
