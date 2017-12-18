@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -75,11 +76,13 @@ class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder> {
     private List<Fruit> mFruitList;
 
     static class ViewHolder extends RecyclerView.ViewHolder {
+        View fruitView;
         ImageView fruitImage;
         TextView fruitName;
 
         public ViewHolder(View view) {
             super(view);
+            fruitView = view;
             fruitImage = (ImageView) view.findViewById(R.id.fruit_image);
             fruitName  = (TextView) view.findViewById(R.id.fruit_name);
         }
@@ -91,14 +94,23 @@ class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder> {
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
         // 纵向滑动
 //        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.fruit_item, parent, false);
 
         // 横向滑动
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.fruit_item_hr, parent, false);
 
-        ViewHolder holder = new ViewHolder(view);
+        final ViewHolder holder = new ViewHolder(view);
+
+        holder.fruitName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int position = holder.getAdapterPosition();
+                Fruit fruit = mFruitList.get(position);
+                Toast.makeText(v.getContext(), "You clicked image" + fruit.getName(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
         return holder;
     }
     @Override
