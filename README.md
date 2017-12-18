@@ -7,5 +7,6 @@
 3. [Android UI —— 常用组件](https://github.com/mnichangxin/AndroidCode/tree/master/UIWidgetTest)
 4. [Android UI —— 基本布局](https://github.com/mnichangxin/AndroidCode/tree/master/UILayoutTest)
 5. [Android UI —— 滑动组件之 ListView](https://github.com/mnichangxin/AndroidCode/tree/master/ListViewTest)
+6. [Android UI —— 滑动组件之 RecyclerView](https://github.com/mnichangxin/AndroidCode/tree/master/RecyclerViewTest)
 
 **学习并更新中，路漫漫其修远兮...**
