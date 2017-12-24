@@ -1,24 +1,12 @@
-package com.example.filepersistencetest;
+# Android 数据持久化 —— 文件
 
-import android.content.Context;
-import android.support.v4.text.TextUtilsCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.text.TextUtils;
-import android.widget.EditText;
-import android.widget.Toast;
+[Java IO 流接口](http://mnichangxin.com/blog/2016/06/05/java-io/)
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
+## 写文件
 
-public class MainLayoutActivity extends AppCompatActivity {
-    private EditText edit;
+`Context` 类中提供了一个 `openFileOutput()` 方法，可用于将数据存储到指定的文件中。第一个参数是文件名，第二个参数有两种模式可选：`MODE_PRIVATE` （覆盖）和 `MODE_APPEND` （追加）
 
+``` java
     public void save(String inputText) {
         FileOutputStream out = null;
         BufferedWriter writer = null;
@@ -38,7 +26,13 @@ public class MainLayoutActivity extends AppCompatActivity {
             }
         }
     }
+```
 
+## 读文件
+
+`Context` 类提供的另一个方法 `openFileInput()` ，只有第一个参数
+
+``` java
     public String load() {
         FileInputStream in = null;
         BufferedReader reader = null;
@@ -63,23 +57,4 @@ public class MainLayoutActivity extends AppCompatActivity {
         }
         return content.toString();
     }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_layout);
-        edit = (EditText) findViewById(R.id.edit);
-        String inputText = load();
-        if (!TextUtils.isEmpty(inputText)) {
-            edit.setText(inputText);
-            edit.setSelection(inputText.length());
-            Toast.makeText(MainLayoutActivity.this, "Restoring succeeded", Toast.LENGTH_SHORT).show();
-        }
-    }
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        String inputText = edit.getText().toString();
-        save(inputText);
-    }
-}
+```
