@@ -1,4 +1,4 @@
-package com.example.lichangxin.broadcasttest;
+package com.example.broadcasttest;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.lichangxin.broadcasttest", appContext.getPackageName());
+        assertEquals("com.example.broadcasttest", appContext.getPackageName());
     }
 }
