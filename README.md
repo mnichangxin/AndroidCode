@@ -12,5 +12,6 @@
 8. [Fragment 最佳实践 —— 简易版的新闻应用](https://github.com/mnichangxin/AndroidCode/tree/master/FragmentBestPractice)
 9. [Android 广播接收器 —— Broadcast Receiver](https://github.com/mnichangxin/AndroidCode/tree/master/BroadcastTest)
 10. [Broadcast Receiver 最佳实践 —— 实现强制下线功能](https://github.com/mnichangxin/AndroidCode/tree/master/BroadcastBestPractice)
+11. [Android 数据持久化 —— 文件](https://github.com/mnichangxin/AndroidCode/tree/master/FilePersistenceTest)
 
 **学习并更新中，路漫漫其修远兮...**
