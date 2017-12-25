@@ -14,5 +14,6 @@
 10. [Broadcast Receiver 最佳实践 —— 实现强制下线功能](https://github.com/mnichangxin/AndroidCode/tree/master/BroadcastBestPractice)
 11. [Android 数据持久化 —— 文件](https://github.com/mnichangxin/AndroidCode/tree/master/FilePersistenceTest)
 12. [Android 数据持久化 —— SharedPreferences](https://github.com/mnichangxin/AndroidCode/tree/master/SharedPreferencesTest)
+13. [Android 数据持久化 —— SQLite 数据库](https://github.com/mnichangxin/AndroidCode/tree/master/DatabaseTest)
 
 **学习并更新中，路漫漫其修远兮...**
