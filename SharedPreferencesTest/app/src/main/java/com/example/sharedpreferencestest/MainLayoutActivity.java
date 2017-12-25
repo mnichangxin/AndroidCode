@@ -31,9 +31,9 @@ public class MainLayoutActivity extends AppCompatActivity {
                 String name = pref.getString("name", "");
                 int age = pref.getInt("age", 0);
                 boolean married = pref.getBoolean("married", false);
-                Log.d("MainActivity", "name is" + name);
-                Log.d("MainActivity", "age is" + age);
-                Log.d("MainActivity", "married is" + married);
+                Log.d("MainActivity", "name is " + name);
+                Log.d("MainActivity", "age is " + age);
+                Log.d("MainActivity", "married is " + married);
             }
         });
     }
