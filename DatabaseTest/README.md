@@ -22,4 +22,6 @@ delete()，传入三个参数：表名称、约束删除某一行或几行的数
 
 5. 查询数据
 
-query()
+query()，参数如下图：
+
+![](http://7xr2ek.com1.z0.glb.clouddn.com/image/jpg/android-sqlite-query.png)
