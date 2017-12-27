@@ -73,6 +73,7 @@ public class MainLayoutActivity extends AppCompatActivity {
             public void onClick(View v) {
                 SQLiteDatabase db = dbHelper.getWritableDatabase();
                 Cursor cursor = db.query("Book", null, null, null, null, null, null);
+
                 if (cursor.moveToFirst()) {
                     do {
                         String name = cursor.getString(cursor.getColumnIndex("name"));
