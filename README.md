@@ -16,5 +16,6 @@
 12. [Android 数据持久化 —— SharedPreferences](https://github.com/mnichangxin/AndroidCode/tree/master/SharedPreferencesTest)
 13. [Android 数据持久化 —— SQLite 数据库](https://github.com/mnichangxin/AndroidCode/tree/master/DatabaseTest)
 14. [Android 运行时权限](https://github.com/mnichangxin/AndroidCode/tree/master/RuntimePermissionTest)
+15. [Android 内容提供器 —— Content Provider](https://github.com/mnichangxin/AndroidCode/tree/master/ContactsTest)
 
 **学习并更新中，路漫漫其修远兮...**
