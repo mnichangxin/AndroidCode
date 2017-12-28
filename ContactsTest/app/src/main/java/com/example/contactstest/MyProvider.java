@@ -60,6 +60,18 @@ public class MyProvider extends ContentProvider {
     }
     @Override
     public String getType(Uri uri) {
+        switch (uriMatcher.match(uri)) {
+            case TABLE1_DIR:
+                return "vnd.android.cursor.dir/vnd.com.example.app.provider.table1";
+            case TABLE1_ITEM:
+                return "vnd.android.cursor.item/vnd.com.example.app.provider.table1";
+            case TABLE2_DIR:
+                return "vnd.android.cursor.dir/vnd.com.example.app.provider.table2";
+            case TABLE2_ITEM:
+                return "vnd.android.cursor.item/vnd.com.example.app.provider.table2";
+            default:
+                break;
+        }
         return null;
     }
 }
