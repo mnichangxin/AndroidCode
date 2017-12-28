@@ -28,6 +28,22 @@ public class MyProvider extends ContentProvider {
     }
     @Override
     public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder) {
+        switch (uriMatcher.match(uri)) {
+            case TABLE1_DIR:
+                // 查询 table1 表中的所有数据
+                break;
+            case TABLE1_ITEM:
+                // 查询 table1 表中的单条数据
+                break;
+            case TABLE2_DIR:
+                // 查询 table2 表中的所有数据
+                break;
+            case TABLE2_ITEM:
+                // 查询 table2 表中的单条数据
+                break;
+            default:
+                break;
+        }
         return null;
     }
     @Override
