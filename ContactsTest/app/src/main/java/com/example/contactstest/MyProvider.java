@@ -12,11 +12,14 @@ public class MyProvider extends ContentProvider {
     public static final int TABLE2_DIR = 2;
     public static final int TABLE2_ITEM = 3;
 
-    private static final int uriMatcher;
+    private static UriMatcher uriMatcher;
 
     static {
         uriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
-        uriMatcher.
+        uriMatcher.addURI("com.example.app.provider", "table1", TABLE1_DIR);
+        uriMatcher.addURI("com.example.app.provider", "table1/#", TABLE1_ITEM);
+        uriMatcher.addURI("com.example.app.provider", "table2", TABLE2_DIR);
+        uriMatcher.addURI("com.example.app.provider", "table2/#", TABLE2_ITEM);
     }
 
     @Override
