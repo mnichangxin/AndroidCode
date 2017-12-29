@@ -32,7 +32,7 @@ public class MainLayoutActivity extends AppCompatActivity {
             }
         });
         // 插入数据
-        addData.setOnClickListener(new View.OnClickListener() {
+0        addData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 SQLiteDatabase db = dbHelper.getWritableDatabase();
