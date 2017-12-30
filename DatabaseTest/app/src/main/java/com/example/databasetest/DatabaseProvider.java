@@ -11,7 +11,7 @@ public class DatabaseProvider extends ContentProvider {
     public static final int BOOK_DIR = 0;
     public static final int BOOK_ITEM = 1;
     public static final int CATEGORY_DIR = 2;
-    public static final int CATEGORY_ITEM =3;
+    public static final int CATEGORY_ITEM = 3;
     public static final String AUTHORITY = "com.example.databasetest.provider";
 
     private static UriMatcher uriMatcher;
@@ -41,7 +41,7 @@ public class DatabaseProvider extends ContentProvider {
                 break;
             case BOOK_ITEM:
                 String bookId = uri.getPathSegments().get(1);
-                cursor = db.query("Book", projection, selection, selectionArgs, null, null, sortOrder);
+                cursor = db.query("Book", projection, "id = ?", new String[] { bookId }, null, null, sortOrder);
                 break;
             case CATEGORY_DIR:
                 cursor = db.query("Category", projection, selection, selectionArgs, null, null, sortOrder);
@@ -86,6 +86,7 @@ public class DatabaseProvider extends ContentProvider {
                 break;
             case BOOK_ITEM:
                 String bookId = uri.getPathSegments().get(1);
+                updatedRows = db.update("Book", values, "id = ?", new String[] { bookId });
                 break;
             case CATEGORY_DIR:
                 updatedRows = db.update("Category", values, selection, selectionArgs);
