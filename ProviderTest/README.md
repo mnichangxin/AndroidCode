@@ -40,4 +40,3 @@
 ``` java
     vnd.android.cursor.item/vnd.com.example.databasetest.provider.book
 ```
-
