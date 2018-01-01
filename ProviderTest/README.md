@@ -9,16 +9,35 @@
 
 初始化内容提供器，true 表示创建成功，false 表示创建失败
 
-* query()
+* query(uri, projection, selection, selectionArgs, orderBy)
 
 ![](http://7xr2ek.com1.z0.glb.clouddn.com/image/jpg/provider-query.png)
 
-* insert()
+查询的结果存放在 Cursor 对象中返回
 
-* update()
+* insert(uri, values)
 
-* delete()
+返回一个 Uri 对象
 
-* getType()
+* update(uri, values, selection, selectionArgs)
 
+返回 int 型数据
+
+* delete(uri, selection, selectionArgs)
+
+返回 int 型数据
+
+* getType(uri)
+
+返回全部数据：
+
+``` java
+    vnd.android.cursor.dir/vnd.com.example.databasetest.provider.book
+```
+
+返回单条数据：
+
+``` java
+    vnd.android.cursor.item/vnd.com.example.databasetest.provider.book
+```
 
