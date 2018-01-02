@@ -148,10 +148,10 @@ public class MainActivity extends AppCompatActivity {
                     // 判断手机系统版本号
                     if (Build.VERSION.SDK_INT >= 19) {
                         // 4.4 及以上系统使用这个方法处理图片
-
+                        handleImageOnkitKat(data);
                     } else {
                         // 4.4 以下系统使用这个方法处理图片
-
+                        handleImageBeforeKitKat(data);
                     }
                 }
                 break;
