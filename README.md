@@ -19,5 +19,6 @@
 15. [Android 内容提供器 —— Content Provider](https://github.com/mnichangxin/AndroidCode/tree/master/ProviderTest)
 16. [Android 消息通知](https://github.com/mnichangxin/AndroidCode/tree/master/NotificationTest)
 17. [调用摄像头和相册](https://github.com/mnichangxin/AndroidCode/tree/master/CameraAlbumTest)
+18. [播放多媒体文件 —— 音频](https://github.com/mnichangxin/AndroidCode/tree/master/PlayAudioTest)
 
 **学习并更新中，路漫漫其修远兮...**
