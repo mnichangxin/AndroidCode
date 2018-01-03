@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             e.printStackTrace();
         }
     }
+
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -37,12 +38,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.pause:
                 if (mediaPlayer.isPlaying()) {
-                    mediaPlayer.pause();
+                    mediaPlayer.pause(); // 暂停播放
                 }
                 break;
             case R.id.stop:
                 if (mediaPlayer.isPlaying()) {
-                    mediaPlayer.reset();
+                    mediaPlayer.reset(); // 停止播放
                     initMediaPlayer();
                 }
                 break;
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button pause = (Button) findViewById(R.id.pause);
         Button stop = (Button) findViewById(R.id.stop);
         play.setOnClickListener(this);
-        play.setOnClickListener(this);
+        pause.setOnClickListener(this);
         stop.setOnClickListener(this);
         if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(MainActivity.this, new String[] { Manifest.permission.WRITE_EXTERNAL_STORAGE }, 1);
