@@ -21,5 +21,6 @@
 17. [调用摄像头和相册](https://github.com/mnichangxin/AndroidCode/tree/master/CameraAlbumTest)
 18. [播放多媒体文件 —— 音频](https://github.com/mnichangxin/AndroidCode/tree/master/PlayAudioTest)
 19. [播放多媒体文件 —— 视频](https://github.com/mnichangxin/AndroidCode/tree/master/PlayVideoTest)
+20. [Android 网络技术](https://github.com/mnichangxin/AndroidCode/tree/master/NetworkTest)
 
 **学习并更新中，路漫漫其修远兮...**
