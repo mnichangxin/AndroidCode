@@ -2,6 +2,7 @@ package com.example.networktest;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 HttpURLConnection connection = null;
                 BufferedReader reader = null;
                 try {
-                    URL url = new URL("http://localhost/get_data.xml");
+                    URL url = new URL("http://10.0.2.2/get_data.xml");
                     connection = (HttpURLConnection) url.openConnection();
                     connection.setRequestMethod("GET");
                     connection.setConnectTimeout(8000);
@@ -40,7 +41,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     while ((Line = reader.readLine()) != null) {
                         response.append(Line);
                     }
-                    showResponse(response.toString());
+//                    showResponse(response.toString());
+                    parseXMLWithPull(response.toString());
                 } catch (Exception e) {
                     e.printStackTrace();
                 } finally {
@@ -50,9 +52,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
-                    }
-                    if (connection != null) {
-                        connection.disconnect();
+                        if (connection != null) {
+                            connection.disconnect();
+                        }
                     }
                 }
             }
@@ -81,8 +83,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 switch (eventType) {
                     // 开始解析某个节点
                     case XmlPullParser.START_TAG:
+                        if ("id".equals(nodeName)) {
+                            id = xmlPullParser.nextText();
+                        } else if ("name".equals(nodeName)) {
+                            name = xmlPullParser.nextText();
+                        } else if ("version".equals(nodeName)) {
+                            version = xmlPullParser.nextText();
+                        }
                         break;
+                    // 完成解析某个节点
                     case XmlPullParser.END_TAG:
+                        if ("app".equals(nodeName)) {
+                            Log.d("MainActivity", "id is " + id);
+                            Log.d("MainActivity", "name is " + name);
+                            Log.d("MainActivity", "version is " + version);
+                        }
                         break;
                     default:
                         break;
