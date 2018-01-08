@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     case XmlPullParser.END_TAG:
                         if ("app".equals(nodeName)) {
                             Log.d("MainActivity", "id is " + id);
-                            Log.d("MainActivity", "name is " + name);
+                            Log.d("MainActivity", "name is  " + name);
                             Log.d("MainActivity", "version is " + version);
                         }
                         break;
