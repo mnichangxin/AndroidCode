@@ -39,3 +39,15 @@
     });
     thread.start();
 ```
+
+## Android 异步消息处理机制
+
+* Message
+
+* Handler
+
+* MessageQueue
+
+* Looper
+
+![](http://7xr2ek.com1.z0.glb.clouddn.com/image/jpg/android-message-looper.png)
