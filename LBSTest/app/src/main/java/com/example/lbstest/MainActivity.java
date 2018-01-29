@@ -66,9 +66,11 @@ public class MainActivity extends AppCompatActivity {
             case 1:
                 if (grantResults.length > 0) {
                     for (int result : grantResults) {
-                        Toast.makeText(this, "必须同意所有权限才能使用本程序", Toast.LENGTH_SHORT).show();
-                        finish();
-                        return;
+                        if (result != PackageManager.PERMISSION_GRANTED) {
+                            Toast.makeText(this, "必须同意所有权限才能使用本程序", Toast.LENGTH_SHORT).show();
+                            finish();
+                            return;
+                        }
                     }
                     requestLocation();
                 } else {
