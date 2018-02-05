@@ -25,5 +25,6 @@
 21. [Android 多线程编程](https://github.com/mnichangxin/AndroidCode/tree/master/AndroidThreadTest)
 22. [Android 服务 —— Service](https://github.com/mnichangxin/AndroidCode/tree/master/ServiceTest)
 23. [Android 地图应用](https://github.com/mnichangxin/AndroidCode/tree/master/LBSTest)
+24. [Android 实战 —— 开发天气应用](https://github.com/mnichangxin/AndroidCode/tree/master/CoolWeather)
 
 **学习并更新中，路漫漫其修远兮...**
