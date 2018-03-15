@@ -58,11 +58,21 @@
 
 ## 百分比布局（PercentFrameLayout | PercentRelativeLayout）
 
-新增布局方式，目前需要引包
+新增布局方式，目前需要引包：
 
-* `app:layout_widthPercent|app:layout_heightPercent`：百分比
+```
+   compile 'com.android.support:percent:26.1.0' 
+```
 
-指定相对于父元素的百分比
+* app:layout_widthPercent
+* app:layout_heightPercent
+* app:layout_marginPercent
+* app:layout_marginTopPercent
+* app:layout_marginBottomPercent
+* app:layout_marginLeftPercent
+* app:layout_marginRightPercent
+* app:layout_marginStartPercent
+* app:layout_marginEndPercent
 
 ## 引入布局
 
